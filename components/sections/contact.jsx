@@ -10,8 +10,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import { Calendar, Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { Calendar, Github, Linkedin, Mail } from "lucide-react";
 import ScrollReveal from "@/components/animations/scroll-reveal";
 import HoverCard from "@/components/animations/hover-card";
 const formSchema = z.object({
@@ -54,20 +54,16 @@ export default function Contact() {
   const socialLinks = [{
     name: "Email",
     icon: <Mail className="h-5 w-5" />,
-    href: "mailto:contact@rishabluthra.dev"
+    href: "mailto:selokardevendra529@gmail.com"
   }, {
     name: "LinkedIn",
     icon: <Linkedin className="h-5 w-5" />,
-    href: "https://linkedin.com"
+    href: "https://www.linkedin.com/in/devendra-selokar-588765250/"
   }, {
     name: "GitHub",
     icon: <Github className="h-5 w-5" />,
-    href: "https://github.com"
-  }, {
-    name: "Twitter",
-    icon: <Twitter className="h-5 w-5" />,
-    href: "https://twitter.com"
-  }, {
+    href: "https://github.com/devendraSelokar05"
+  },  {
     name: "Schedule a Call",
     icon: <Calendar className="h-5 w-5" />,
     href: "https://calendly.com"
@@ -103,7 +99,7 @@ export default function Contact() {
                     duration: 0.3,
                     delay: index * 0.1
                   }}>
-                        <motion.a href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors" whileHover={{
+                        <motion.a href={link.href} target={link.href.startsWith("mailto:") ? undefined : "_blank"} rel="noopener noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted transition-colors" whileHover={{
                       x: 5
                     }} whileTap={{
                       scale: 0.98
@@ -135,7 +131,7 @@ export default function Contact() {
                 </CardHeader>
                 <CardContent>
                   <Form {...form}>
-                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <form noValidate onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <FormField control={form.control} name="name" render={({
                         field
@@ -151,7 +147,7 @@ export default function Contact() {
                       }) => <FormItem>
                               <FormLabel>Email</FormLabel>
                               <FormControl>
-                                <Input placeholder="Your email" {...field} className="transition-all focus-visible:ring-primary" />
+                                <Input type="email" placeholder="Your email" {...field} className="transition-all focus-visible:ring-primary" />
                               </FormControl>
                               <FormMessage />
                             </FormItem>} />

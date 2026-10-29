@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
@@ -18,7 +17,6 @@ import { ExternalLink, Smartphone } from "lucide-react";
 import ScrollReveal from "@/components/animations/scroll-reveal";
 import HoverCard from "@/components/animations/hover-card";
 
-// Sample project data - in a real app, this would come from a database
 const projectsData = [
   {
     id: 1,
@@ -34,7 +32,7 @@ const projectsData = [
     id: 2,
     title: "Dukaanse — Grocery Delivery Platform",
     description:
-      "DukaanSe is a hyperlocal grocery platform that helps nearby stores take their businesses online while allowing customers to shop from local stores with home delivery or self-pickup. It features a Gullak Coins rewards system with signup, order-completion, and referral-based rewards, along with coin-based discounts for self-pickup orders.The platform also includes a two-way referral system, allowing customers to refer shops and friends, while shopkeepers can refer customers and other shops. Shopkeepers can earn coins through successful referrals and distribute them to customers as bonuses, creating a rewarding local shopping ecosystem.",
+      "DukaanSe is a hyperlocal grocery platform that helps nearby stores take their businesses online while allowing customers to shop from local stores with home delivery or self-pickup. It features a Gullak Coins rewards system with signup, order-completion, and referral-based rewards, along with coin-based discounts for self-pickup orders. The platform also includes a two-way referral system, allowing customers to refer shops and friends, while shopkeepers can refer customers and other shops. Shopkeepers can earn coins through successful referrals and distribute them to customers as bonuses, creating a rewarding local shopping ecosystem.",
     image: "/projects/dukaanse.png",
     tags: ["Full Stack", "Backend", "React", "Node.js", "MongoDB", "Redux"],
     demoLink: "https://www.dukaanseindia.com/",
@@ -48,13 +46,15 @@ const projectsData = [
         url: "https://play.google.com/store/apps/details?id=com.dukkanshop&pcampaignid=web_share",
       },
     ],
-    category: ["Frontend","Backend", "Full Stack"],
+    category: ["Frontend", "Backend", "Full Stack"],
   },
   {
     id: 3,
     title: "Taxi Booking System",
     description:
-      "A feature-rich taxi booking system inspired by platforms like Ola and Uber. Customers make an advance payment to confirm their ride, which is then offered to drivers with the required vehicle type. The platform includes live customer-driver chat, SOS, live trip sharing, automated invoices, and real-time ride tracking for a seamless and secure booking experience.It also supports online and advance bookings, driver-side ride management, automated payment/refund handling, and dynamic pricing based on city, vehicle type, surge, and night charges.",
+      "A feature-rich taxi booking system inspired by platforms like Ola and Uber. Customers make an advance payment to confirm their ride, which is then offered to drivers with the required vehicle type. The platform includes live customer-driver chat, SOS, live trip sharing, automated invoices, and real-time ride tracking for a seamless and secure booking experience. It also supports online and advance bookings, driver-side ride management, automated payment/refund handling, and dynamic pricing based on city, vehicle type, surge, and night charges.",
+    // Behtar: image download karke public/projects/taxi.png me rakho
+    // aur yahan "/projects/taxi.png" use karo.
     image:
       "https://play-lh.googleusercontent.com/b5EtQitWn897QEGp4KVDRk5UKPj6MN17L3WmasPlCqZrOQjGXcZeeYJSLMCnKivQifFKbYISF9UeuSfdSOXAEg=w5120-h2880-rw",
     tags: ["Backend", "Node.js", "Express", "MongoDB"],
@@ -69,53 +69,84 @@ const projectsData = [
         url: "https://play.google.com/store/apps/details?id=com.skg.driver&pcampaignid=web_share",
       },
     ],
-    // githubLink: "https://github.com",
     category: ["Frontend", "Backend"],
   },
   {
     id: 4,
     title: "Pench Foods & Dairy Product",
     description: "A platform for selling food and dairy products online.",
-    image: "/projects/pench-foods.png",
+    image: "https://penchadmin.netlify.app/images/LOGIN-1.png",
     tags: ["Frontend", "Next.js", "Tailwind CSS"],
     demoLink: "https://penchfoods.com/",
     githubLink: "https://github.com",
-    category: "Frontend",
-  },
-  {
-    id: 5,
-    title: "Real-time Chat Application",
-    description:
-      "A real-time chat application with private messaging and group chat functionality.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Full Stack", "React", "Node.js", "Socket.io"],
-    demoLink: "https://example.com",
-    githubLink: "https://github.com",
-    category: "Full Stack",
-  },
-  {
-    id: 6,
-    title: "Weather Dashboard",
-    description:
-      "A weather dashboard that displays current and forecasted weather data from multiple APIs.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["Frontend", "React", "API Integration"],
-    demoLink: "https://example.com",
-    githubLink: "https://github.com",
-    category: "Frontend",
+    category: ["Frontend"],
   },
 ];
-const categories = ["All", "Frontend", "Full Stack", "Backend", ];
+
+const categories = ["All", "Frontend", "Full Stack", "Backend"];
+
+/* Image jo load na ho to placeholder dikhaye (broken alt text nahi) */
+function ProjectImage({ src, alt }) {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <div className="relative h-52 w-full shrink-0 overflow-hidden bg-muted">
+      {failed ? (
+        <div className="flex h-full w-full items-center justify-center px-4 text-center text-sm text-muted-foreground">
+          {alt}
+        </div>
+      ) : (
+        <Image
+          src={src || "/placeholder.svg"}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          onError={() => setFailed(true)}
+          className="object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+      )}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+    </div>
+  );
+}
+
+/* Lamba description 4 lines me clamp, "Read more" se khulega */
+function ProjectDescription({ text }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = text.length > 160;
+
+  return (
+    <div>
+      <p
+        className={`text-sm text-muted-foreground ${
+          expanded ? "" : "line-clamp-4"
+        }`}
+      >
+        {text}
+      </p>
+      {isLong && (
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          className="mt-1 text-xs font-medium text-primary hover:underline"
+        >
+          {expanded ? "Show less" : "Read more"}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
+
   const filteredProjects =
     activeCategory === "All"
       ? projectsData
       : projectsData.filter((project) =>
-          Array.isArray(project.category)
-            ? project.category.includes(activeCategory)
-            : project.category === activeCategory,
+          project.category.includes(activeCategory),
         );
+
   return (
     <section id="projects" className="container py-24 scroll-mt-16">
       <ScrollReveal className="space-y-12">
@@ -128,43 +159,19 @@ export default function Projects() {
 
           <motion.div
             className="flex flex-wrap justify-center gap-2 pt-4"
-            initial={{
-              opacity: 0,
-              y: 20,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.5,
-              delay: 0.2,
-            }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             {categories.map((category, index) => (
               <motion.div
                 key={category}
-                initial={{
-                  opacity: 0,
-                  scale: 0.8,
-                }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.3,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  scale: 1.05,
-                }}
-                whileTap={{
-                  scale: 0.95,
-                }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Button
                   variant={activeCategory === category ? "default" : "outline"}
@@ -178,44 +185,33 @@ export default function Projects() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* items-stretch + h-full = saare cards same height */}
+        <div className="grid grid-cols-1 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="wait" initial={false}>
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: -20,
-                }}
+                className="h-full"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{
                   duration: 0.3,
                   delay: Math.min(index * 0.05, 0.3),
                 }}
                 layout="position"
               >
-                <HoverCard scale={1.03} shadow border>
-                  <Card className="h-full flex flex-col overflow-hidden group">
-                    <div className="relative h-60 overflow-hidden">
-                      <Image
-                        src={project.image || "/placeholder.svg"}
-                        alt={project.title}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    </div>
-                    <CardHeader>
-                      <CardTitle>{project.title}</CardTitle>
-                      <CardDescription>{project.description}</CardDescription>
+                <HoverCard scale={1.03} shadow border className="h-full">
+                  <Card className="group flex h-full flex-col overflow-hidden">
+                    <ProjectImage src={project.image} alt={project.title} />
+
+                    <CardHeader className="space-y-2">
+                      <CardTitle className="line-clamp-2 min-h-[3.5rem]">
+                        {project.title}
+                      </CardTitle>
+                      <ProjectDescription text={project.description} />
                     </CardHeader>
+
                     <CardContent className="flex-grow">
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
@@ -229,11 +225,12 @@ export default function Projects() {
                         ))}
                       </div>
                     </CardContent>
-                    <CardFooter className="flex gap-2 overflow-x-auto pb-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+
+                    {/* flex-wrap: saare buttons dikhenge, hamesha card ke neeche */}
+                    <CardFooter className="mt-auto flex flex-wrap gap-2">
                       <motion.div
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="shrink-0"
                       >
                         <Button
                           asChild
@@ -246,7 +243,7 @@ export default function Projects() {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <ExternalLink className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                            <ExternalLink className="mr-2 h-4 w-4 transition-transform group-hover:rotate-12" />
                             Website
                           </Link>
                         </Button>
@@ -257,7 +254,6 @@ export default function Projects() {
                           key={app.url}
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="shrink-0"
                         >
                           <Button
                             asChild
@@ -270,7 +266,7 @@ export default function Projects() {
                               target="_blank"
                               rel="noopener noreferrer"
                             >
-                              <Smartphone className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                              <Smartphone className="mr-2 h-4 w-4 transition-transform group-hover:rotate-12" />
                               {app.label}
                             </Link>
                           </Button>

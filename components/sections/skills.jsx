@@ -16,9 +16,6 @@ const skillsData = {
     name: "Next.js",
     level: 90
   }, {
-    name: "TypeScript",
-    level: 85
-  }, {
     name: "Tailwind CSS",
     level: 90
   }, {
@@ -40,10 +37,12 @@ const skillsData = {
   }, {
     name: "REST API Design",
     level: 85
-  }, {
+  }, 
+  {
     name: "GraphQL",
     level: 70
-  }],
+  }
+],
   tools: [{
     name: "Git & GitHub",
     level: 90
@@ -51,7 +50,7 @@ const skillsData = {
     name: "Docker",
     level: 75
   }, {
-    name: "AWS",
+    name: "Hostinger",
     level: 70
   }, {
     name: "CI/CD",

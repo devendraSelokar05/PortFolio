@@ -1,0 +1,500 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "D.S" [ref=e6] [cursor=pointer]:
+        - /url: /#
+      - navigation [ref=e9]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: /#
+        - link "About" [ref=e14] [cursor=pointer]:
+          - /url: /#about
+        - link "Projects" [ref=e16] [cursor=pointer]:
+          - /url: /#projects
+        - link "Experience" [ref=e18] [cursor=pointer]:
+          - /url: /#experience
+        - link "Blog" [ref=e20] [cursor=pointer]:
+          - /url: /#blog
+        - link "Contact" [ref=e22] [cursor=pointer]:
+          - /url: /#contact
+  - main [ref=e23]:
+    - generic [ref=e24]:
+      - generic [ref=e25]:
+        - heading "Hi, I'm Devendra Selokar" [level=1] [ref=e27]:
+          - text: Hi, I'm
+          - generic [ref=e28]: Devendra Selokar
+        - paragraph [ref=e30]: I build modern, responsive web applications with React, Next.js, and Node.js. Passionate about creating seamless user experiences and scalable backend solutions.
+        - generic [ref=e31]:
+          - link "View My Work" [ref=e33] [cursor=pointer]:
+            - /url: "#projects"
+          - link "Hire Me 👋" [ref=e37] [cursor=pointer]:
+            - /url: "#contact"
+            - generic [ref=e38]: Hire Me
+            - generic [ref=e39]: 👋
+      - img "Devendra Selokar" [ref=e45]
+    - generic [ref=e48]:
+      - generic [ref=e49]:
+        - heading "About Me" [level=2] [ref=e51]
+        - paragraph [ref=e53]: Hi, I'm Devendra Selokar, a passionate Node.js Backend & MERN Stack Developer with 1.3+ year of professional experience in building scalable web applications and production-ready backend systems.
+        - paragraph [ref=e55]: I specialize in designing secure, high-performance REST APIs using Node.js, Express.js, MongoDB, and React.js. Throughout my professional journey, I have worked on real-world applications including a Taxi Booking Platform, Multi-Vendor Delivery Platform, and Dairy Delivery Management System.
+        - paragraph [ref=e57]: I enjoy solving complex backend challenges, optimizing application performance, and building scalable software that delivers an excellent user experience.
+        - generic [ref=e59]:
+          - heading "Tech Stack" [level=3] [ref=e60]
+          - generic [ref=e61]:
+            - generic [ref=e62]: Node.js
+            - generic [ref=e63]: Express.js
+            - generic [ref=e64]: MongoDB
+            - generic [ref=e65]: React.js
+            - generic [ref=e66]: Redis
+            - generic [ref=e67]: Docker
+            - generic [ref=e68]: Razorpay
+            - generic [ref=e69]: JavaScript
+        - generic [ref=e71]:
+          - heading "Expertise" [level=3] [ref=e72]
+          - generic [ref=e73]:
+            - generic [ref=e74]: Backend Architecture & REST APIs
+            - generic [ref=e75]: Authentication & RBAC
+            - generic [ref=e76]: Razorpay Payment Integration
+            - generic [ref=e77]: Wallet & Transaction Management
+            - generic [ref=e78]: Driver & Order Management
+            - generic [ref=e79]: Redis Caching & Docker
+            - generic [ref=e80]: MongoDB Design & Optimization
+            - generic [ref=e81]: Real-Time Scalable Systems
+        - generic [ref=e83]:
+          - link "View Resume" [ref=e85] [cursor=pointer]:
+            - /url: /resume.pdf
+          - link "Download Resume" [ref=e89] [cursor=pointer]:
+            - /url: /resume.pdf
+      - img "About Devendra Selokar" [ref=e94]
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - heading "My Projects" [level=2] [ref=e99]
+        - paragraph [ref=e100]: Explore my recent projects showcasing my skills in frontend and backend development.
+        - generic [ref=e101]:
+          - button "All" [ref=e103] [cursor=pointer]
+          - button "Frontend" [ref=e105] [cursor=pointer]
+          - button "Full Stack" [ref=e107] [cursor=pointer]
+          - button "Backend" [ref=e109] [cursor=pointer]
+      - generic [ref=e110]:
+        - generic [ref=e113]:
+          - img "Zotto — Sanitary Pad E-Commerce Platform" [ref=e115]
+          - generic [ref=e116]:
+            - generic [ref=e117]: Zotto — Sanitary Pad E-Commerce Platform
+            - paragraph [ref=e119]: A pincode-based sanitary pad delivery platform with role-based panels for SuperAdmin, Branch Admin, and Delivery Boy — from inventory to doorstep.
+          - generic [ref=e121]:
+            - generic [ref=e122]: Node.js
+            - generic [ref=e123]: MongoDB
+            - generic [ref=e124]: Redux
+          - link "Website" [ref=e127] [cursor=pointer]:
+            - /url: https://zotto.in/
+        - generic [ref=e130]:
+          - img "Dukaanse — Grocery Delivery Platform" [ref=e132]
+          - generic [ref=e133]:
+            - generic [ref=e134]: Dukaanse — Grocery Delivery Platform
+            - generic [ref=e135]:
+              - paragraph [ref=e136]: DukaanSe is a hyperlocal grocery platform that helps nearby stores take their businesses online while allowing customers to shop from local stores with home delivery or self-pickup. It features a Gullak Coins rewards system with signup, order-completion, and referral-based rewards, along with coin-based discounts for self-pickup orders. The platform also includes a two-way referral system, allowing customers to refer shops and friends, while shopkeepers can refer customers and other shops. Shopkeepers can earn coins through successful referrals and distribute them to customers as bonuses, creating a rewarding local shopping ecosystem.
+              - button "Read more" [ref=e137] [cursor=pointer]
+          - generic [ref=e139]:
+            - generic [ref=e140]: Full Stack
+            - generic [ref=e141]: Backend
+            - generic [ref=e142]: React
+            - generic [ref=e143]: Node.js
+            - generic [ref=e144]: MongoDB
+            - generic [ref=e145]: Redux
+          - generic [ref=e146]:
+            - link "Website" [ref=e148] [cursor=pointer]:
+              - /url: https://www.dukaanseindia.com/
+            - link "DukaanSe Customer App" [ref=e150] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.dukaan.customer&pcampaignid=web_share
+            - link "DukaanSe Shop App" [ref=e152] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.dukkanshop&pcampaignid=web_share
+        - generic [ref=e155]:
+          - img "Taxi Booking System" [ref=e157]
+          - generic [ref=e158]:
+            - generic [ref=e159]: Taxi Booking System
+            - generic [ref=e160]:
+              - paragraph [ref=e161]: A feature-rich taxi booking system inspired by platforms like Ola and Uber. Customers make an advance payment to confirm their ride, which is then offered to drivers with the required vehicle type. The platform includes live customer-driver chat, SOS, live trip sharing, automated invoices, and real-time ride tracking for a seamless and secure booking experience. It also supports online and advance bookings, driver-side ride management, automated payment/refund handling, and dynamic pricing based on city, vehicle type, surge, and night charges.
+              - button "Read more" [ref=e162] [cursor=pointer]
+          - generic [ref=e164]:
+            - generic [ref=e165]: Backend
+            - generic [ref=e166]: Node.js
+            - generic [ref=e167]: Express
+            - generic [ref=e168]: MongoDB
+          - generic [ref=e169]:
+            - link "Website" [ref=e171] [cursor=pointer]:
+              - /url: https://taxi.technokrate.com/
+            - link "SKG User" [ref=e173] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.skg.user&pcampaignid=web_share
+            - link "SKG Driver" [ref=e175] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.skg.driver&pcampaignid=web_share
+        - generic [ref=e178]:
+          - img "Pench Foods & Dairy Product" [ref=e180]
+          - generic [ref=e181]:
+            - generic [ref=e182]: Pench Foods & Dairy Product
+            - paragraph [ref=e184]: A platform for selling food and dairy products online.
+          - generic [ref=e186]:
+            - generic [ref=e187]: Frontend
+            - generic [ref=e188]: Next.js
+            - generic [ref=e189]: Tailwind CSS
+          - link "Website" [ref=e192] [cursor=pointer]:
+            - /url: https://penchfoods.com/
+    - generic [ref=e194]:
+      - generic [ref=e195]:
+        - heading "Experience & Certifications" [level=2] [ref=e196]
+        - paragraph [ref=e197]: My professional journey and credentials in the tech industry.
+      - generic [ref=e198]:
+        - tablist [ref=e200]:
+          - tab "Work Experience" [selected] [ref=e201] [cursor=pointer]
+          - tab "Certifications" [ref=e202] [cursor=pointer]
+        - tabpanel "Work Experience" [ref=e203]:
+          - generic [ref=e204]:
+            - generic [ref=e207]:
+              - generic [ref=e209]:
+                - generic [ref=e210]:
+                  - generic [ref=e211]: Full Stack Developer
+                  - generic [ref=e212]: Dukaanse India Pvt. Ltd
+                - generic [ref=e213]: Jun 2026 - Present
+              - generic [ref=e214]:
+                - paragraph [ref=e215]: Building and maintaining DukaanSe, a hyperlocal grocery delivery platform, across the frontend and backend using React, Redux, Node.js, and MongoDB.
+                - generic [ref=e216]:
+                  - heading "Key Responsibilities:" [level=4] [ref=e217]
+                  - list [ref=e218]:
+                    - listitem [ref=e219]: Develop and maintain features across the React frontend and Node.js backend
+                    - listitem [ref=e220]: Work on the Gullak Coins rewards and two-way referral system for customers and shopkeepers
+                    - listitem [ref=e221]: Design and integrate REST APIs and MongoDB data models for orders, shops, and rewards
+                    - listitem [ref=e222]: Manage application state with Redux and keep the UI responsive across devices
+            - generic [ref=e225]:
+              - generic [ref=e227]:
+                - generic [ref=e228]:
+                  - generic [ref=e229]: Node.js Developer
+                  - generic [ref=e230]: Talentrise Technokrate Pvt. Ltd
+                - generic [ref=e231]: Jun 2025 - May 2026
+              - generic [ref=e232]:
+                - paragraph [ref=e233]: Joined full-time after my internship and built backend systems and APIs for client projects using Node.js, Express, and MongoDB, including a taxi booking platform with web and mobile app support.
+                - generic [ref=e234]:
+                  - heading "Key Responsibilities:" [level=4] [ref=e235]
+                  - list [ref=e236]:
+                    - listitem [ref=e237]: Built and maintained REST APIs for the taxi booking system, covering ride booking, driver management, and payments
+                    - listitem [ref=e238]: Implemented live features such as customer-driver chat, real-time ride tracking, and trip sharing
+                    - listitem [ref=e239]: Handled automated invoices, payment and refund flows, and dynamic pricing logic
+                    - listitem [ref=e240]: Designed MongoDB schemas and implemented authentication and role-based access
+                    - listitem [ref=e241]: Delivered projects from development to deployment alongside the frontend and mobile teams
+            - generic [ref=e244]:
+              - generic [ref=e246]:
+                - generic [ref=e247]:
+                  - generic [ref=e248]: Node.js Developer Intern
+                  - generic [ref=e249]: Talentrise Technokrate Pvt. Ltd
+                - generic [ref=e250]: Mar 2025 - Jun 2025
+              - generic [ref=e251]:
+                - paragraph [ref=e252]: Three-month internship focused on learning backend development with Node.js and MongoDB while contributing to live client projects.
+                - generic [ref=e253]:
+                  - heading "Key Responsibilities:" [level=4] [ref=e254]
+                  - list [ref=e255]:
+                    - listitem [ref=e256]: Built REST API endpoints with Node.js and Express under senior developer guidance
+                    - listitem [ref=e257]: Worked with MongoDB for data modeling, queries, and CRUD operations
+                    - listitem [ref=e258]: Fixed bugs, wrote cleaner code through code reviews, and learned Git team workflows
+                    - listitem [ref=e259]: Earned a full-time offer based on performance during the internship
+    - generic [ref=e261]:
+      - generic [ref=e262]:
+        - heading "Technical Skills" [level=2] [ref=e263]
+        - paragraph [ref=e264]: My proficiency in various technologies and tools.
+      - generic [ref=e265]:
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - generic [ref=e270]: Frontend
+            - generic [ref=e271]: Technologies for building modern user interfaces
+          - generic [ref=e272]:
+            - generic:
+              - generic:
+                - generic [ref=e273]: React
+                - generic [ref=e274]: 95%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e275]: Next.js
+                - generic [ref=e276]: 90%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e277]: TypeScript
+                - generic [ref=e278]: 85%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e279]: Tailwind CSS
+                - generic [ref=e280]: 90%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e281]: Redux
+                - generic [ref=e282]: 80%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e283]: Framer Motion
+                - generic [ref=e284]: 75%
+              - generic:
+                - progressbar
+        - generic [ref=e287]:
+          - generic [ref=e288]:
+            - generic [ref=e289]: Backend
+            - generic [ref=e290]: Server-side technologies and databases
+          - generic [ref=e291]:
+            - generic:
+              - generic:
+                - generic [ref=e292]: Node.js
+                - generic [ref=e293]: 85%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e294]: Express
+                - generic [ref=e295]: 90%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e296]: MongoDB
+                - generic [ref=e297]: 80%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e298]: REST API Design
+                - generic [ref=e299]: 85%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e300]: GraphQL
+                - generic [ref=e301]: 70%
+              - generic:
+                - progressbar
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]: Tools & DevOps
+            - generic [ref=e307]: Development tools and deployment technologies
+          - generic [ref=e308]:
+            - generic:
+              - generic:
+                - generic [ref=e309]: Git & GitHub
+                - generic [ref=e310]: 90%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e311]: Docker
+                - generic [ref=e312]: 75%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e313]: AWS
+                - generic [ref=e314]: 70%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e315]: CI/CD
+                - generic [ref=e316]: 80%
+              - generic:
+                - progressbar
+            - generic:
+              - generic:
+                - generic [ref=e317]: Jest
+                - generic [ref=e318]: 75%
+              - generic:
+                - progressbar
+    - generic [ref=e320]:
+      - generic [ref=e321]:
+        - heading "Client Testimonials" [level=2] [ref=e322]
+        - paragraph [ref=e323]: What people say about working with me.
+      - region [ref=e324]:
+        - generic [ref=e326]:
+          - group [ref=e327]:
+            - generic [ref=e330]:
+              - paragraph [ref=e337]: Rishabh is an exceptional developer who consistently delivers high-quality work. His attention to detail and problem-solving skills are impressive. He transformed our outdated website into a modern, user-friendly platform that has significantly improved our customer engagement.
+              - generic [ref=e339]:
+                - img "Sarah Johnson" [ref=e341]
+                - generic [ref=e342]:
+                  - paragraph [ref=e343]: Sarah Johnson
+                  - generic [ref=e344]: CTO at TechStart, TechStart
+          - group [ref=e345]:
+            - generic [ref=e348]:
+              - paragraph [ref=e355]: Working with Rishabh was a pleasure. He understood our requirements quickly and delivered a solution that exceeded our expectations. His technical expertise and communication skills made the entire development process smooth and efficient.
+              - generic [ref=e357]:
+                - img "Michael Chen" [ref=e359]
+                - generic [ref=e360]:
+                  - paragraph [ref=e361]: Michael Chen
+                  - generic [ref=e362]: Product Manager, InnovateTech
+          - group [ref=e363]:
+            - generic [ref=e366]:
+              - paragraph [ref=e373]: Rishabh is a talented developer with a keen eye for design. He helped us build a complex web application with a seamless user experience. His ability to translate our vision into a functional product was remarkable.
+              - generic [ref=e375]:
+                - img "Emily Rodriguez" [ref=e377]
+                - generic [ref=e378]:
+                  - paragraph [ref=e379]: Emily Rodriguez
+                  - generic [ref=e380]: Founder, DesignHub
+          - group [ref=e381]:
+            - generic [ref=e384]:
+              - paragraph [ref=e391]: I've worked with many developers, but Rishabh stands out for his technical skills and work ethic. He's proactive, solution-oriented, and delivers clean, maintainable code. A true asset to any development team.
+              - generic [ref=e393]:
+                - img "David Kim" [ref=e395]
+                - generic [ref=e396]:
+                  - paragraph [ref=e397]: David Kim
+                  - generic [ref=e398]: Engineering Lead, SoftSolutions
+        - generic [ref=e399]:
+          - generic [ref=e400]:
+            - button "Previous slide" [disabled]
+          - generic [ref=e401]:
+            - button "Next slide" [disabled]
+    - generic [ref=e403]:
+      - generic [ref=e404]:
+        - heading "Latest Articles" [level=2] [ref=e405]
+        - paragraph [ref=e406]: Thoughts, tutorials, and insights on web development.
+      - generic [ref=e407]:
+        - generic [ref=e410]:
+          - img "Building Performant React Applications" [ref=e412]
+          - generic [ref=e414]:
+            - generic [ref=e415]:
+              - generic [ref=e416]: React
+              - generic [ref=e417]: Performance
+              - generic [ref=e418]: Web Development
+            - generic [ref=e419]: Building Performant React Applications
+            - generic [ref=e420]:
+              - generic [ref=e421]: Mar 15, 2023
+              - generic [ref=e424]: 8 min read
+          - paragraph [ref=e429]: Learn how to optimize your React applications for better performance and user experience.
+          - link "Read More →" [ref=e432] [cursor=pointer]:
+            - /url: /blog/building-performant-react-applications
+            - text: Read More
+            - generic [ref=e433]: →
+        - generic [ref=e436]:
+          - img "Getting Started with Next.js and TypeScript" [ref=e438]
+          - generic [ref=e440]:
+            - generic [ref=e441]:
+              - generic [ref=e442]: Next.js
+              - generic [ref=e443]: TypeScript
+              - generic [ref=e444]: Tutorial
+            - generic [ref=e445]: Getting Started with Next.js and TypeScript
+            - generic [ref=e446]:
+              - generic [ref=e447]: Feb 22, 2023
+              - generic [ref=e450]: 10 min read
+          - paragraph [ref=e455]: A comprehensive guide to setting up a new project with Next.js and TypeScript.
+          - link "Read More →" [ref=e458] [cursor=pointer]:
+            - /url: /blog/getting-started-with-nextjs-and-typescript
+            - text: Read More
+            - generic [ref=e459]: →
+        - generic [ref=e462]:
+          - img "MongoDB Best Practices for Node.js Developers" [ref=e464]
+          - generic [ref=e466]:
+            - generic [ref=e467]:
+              - generic [ref=e468]: MongoDB
+              - generic [ref=e469]: Node.js
+              - generic [ref=e470]: Database
+            - generic [ref=e471]: MongoDB Best Practices for Node.js Developers
+            - generic [ref=e472]:
+              - generic [ref=e473]: Jan 10, 2023
+              - generic [ref=e476]: 12 min read
+          - paragraph [ref=e481]: Learn how to effectively use MongoDB in your Node.js applications with these best practices.
+          - link "Read More →" [ref=e484] [cursor=pointer]:
+            - /url: /blog/mongodb-best-practices-for-nodejs-developers
+            - text: Read More
+            - generic [ref=e485]: →
+      - link "View All Articles" [ref=e487] [cursor=pointer]:
+        - /url: /blog
+    - generic [ref=e489]:
+      - generic [ref=e490]:
+        - heading "Get In Touch" [level=2] [ref=e491]
+        - paragraph [ref=e492]: Have a project in mind or want to discuss a potential collaboration? Feel free to reach out!
+      - generic [ref=e493]:
+        - generic [ref=e496]:
+          - generic [ref=e497]:
+            - generic [ref=e498]: Contact Information
+            - generic [ref=e499]: Connect with me through any of these platforms.
+          - list [ref=e501]:
+            - listitem [ref=e502]:
+              - link "Email" [ref=e503] [cursor=pointer]:
+                - /url: mailto:contact@rishabluthra.dev
+            - listitem [ref=e509]:
+              - link "LinkedIn" [ref=e510] [cursor=pointer]:
+                - /url: https://linkedin.com
+            - listitem [ref=e517]:
+              - link "GitHub" [ref=e518] [cursor=pointer]:
+                - /url: https://github.com
+            - listitem [ref=e524]:
+              - link "Twitter" [ref=e525] [cursor=pointer]:
+                - /url: https://twitter.com
+            - listitem [ref=e530]:
+              - link "Schedule a Call" [ref=e531] [cursor=pointer]:
+                - /url: https://calendly.com
+        - generic [ref=e538]:
+          - generic [ref=e539]:
+            - generic [ref=e540]: Send a Message
+            - generic [ref=e541]: Fill out the form below and I'll get back to you as soon as possible.
+          - generic [ref=e543]:
+            - generic [ref=e544]:
+              - generic [ref=e545]:
+                - text: Name
+                - textbox "Name" [ref=e546]:
+                  - /placeholder: Your name
+              - generic [ref=e547]:
+                - text: Email
+                - textbox "Email" [ref=e548]:
+                  - /placeholder: Your email
+            - generic [ref=e549]:
+              - text: Subject
+              - textbox "Subject" [ref=e550]:
+                - /placeholder: Subject of your message
+            - generic [ref=e551]:
+              - text: Message
+              - textbox "Message" [ref=e552]:
+                - /placeholder: Your message
+            - button "Send Message" [ref=e554] [cursor=pointer]
+    - generic [ref=e558]:
+      - generic [ref=e559]:
+        - generic [ref=e560]:
+          - heading "Rishabh Luthra" [level=3] [ref=e561]
+          - paragraph [ref=e562]: Full Stack Developer specializing in building exceptional digital experiences.
+          - generic [ref=e563]:
+            - generic:
+              - link "Email":
+                - /url: mailto:contact@rishabluthra.dev
+            - generic:
+              - link "LinkedIn":
+                - /url: https://linkedin.com
+            - generic:
+              - link "GitHub":
+                - /url: https://github.com
+            - generic:
+              - link "Twitter":
+                - /url: https://twitter.com
+        - generic [ref=e564]:
+          - heading "Quick Links" [level=3] [ref=e565]
+          - navigation [ref=e566]:
+            - link "Home" [ref=e568] [cursor=pointer]:
+              - /url: /#
+            - link "About" [ref=e570] [cursor=pointer]:
+              - /url: /#about
+            - link "Projects" [ref=e572] [cursor=pointer]:
+              - /url: /#projects
+            - link "Experience" [ref=e574] [cursor=pointer]:
+              - /url: /#experience
+            - link "Blog" [ref=e576] [cursor=pointer]:
+              - /url: /#blog
+            - link "Contact" [ref=e578] [cursor=pointer]:
+              - /url: /#contact
+        - generic [ref=e579]:
+          - heading "Get in Touch" [level=3] [ref=e580]
+          - paragraph [ref=e581]: Have a project in mind or want to work together? Feel free to reach out!
+          - link "Contact Me" [ref=e583] [cursor=pointer]:
+            - /url: /#contact
+      - generic [ref=e586]:
+        - paragraph [ref=e587]: © 2026 Rishabh Luthra. All Rights Reserved.
+        - paragraph [ref=e588]: Built with Next.js, TypeScript & Tailwind CSS
+  - region "Notifications (F8)":
+    - list

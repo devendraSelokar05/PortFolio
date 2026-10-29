@@ -20,9 +20,9 @@ const Experience = dynamic(() => import("@/components/sections/experience"), {
 const Skills = dynamic(() => import("@/components/sections/skills"), {
   ssr: true
 });
-const Testimonials = dynamic(() => import("@/components/sections/testimonials"), {
-  ssr: true
-});
+// const Testimonials = dynamic(() => import("@/components/sections/testimonials"), {
+//   ssr: true
+// });
 const Blog = dynamic(() => import("@/components/sections/blog"), {
   ssr: true
 });
@@ -51,7 +51,7 @@ export default function Home() {
       <Projects />
       <Experience />
       <Skills />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Blog />
       <Contact />
       <Footer />

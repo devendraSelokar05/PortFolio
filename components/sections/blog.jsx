@@ -15,7 +15,7 @@ const blogData = [{
   id: 1,
   title: "Building Performant React Applications",
   excerpt: "Learn how to optimize your React applications for better performance and user experience.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/React.jpg",
   date: "Mar 15, 2023",
   readTime: "8 min read",
   tags: ["React", "Performance", "Web Development"],
@@ -24,7 +24,7 @@ const blogData = [{
   id: 2,
   title: "Getting Started with Next.js and TypeScript",
   excerpt: "A comprehensive guide to setting up a new project with Next.js and TypeScript.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/typeScript.jpg",
   date: "Feb 22, 2023",
   readTime: "10 min read",
   tags: ["Next.js", "TypeScript", "Tutorial"],
@@ -33,7 +33,7 @@ const blogData = [{
   id: 3,
   title: "MongoDB Best Practices for Node.js Developers",
   excerpt: "Learn how to effectively use MongoDB in your Node.js applications with these best practices.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/MongoDb.jpg",
   date: "Jan 10, 2023",
   readTime: "12 min read",
   tags: ["MongoDB", "Node.js", "Database"],
@@ -51,7 +51,7 @@ export default function Blog() {
 
         <StaggeredChildren className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {blogData.map(post => <HoverCard key={post.id} scale={1.03} shadow>
-              <Card className="h-full flex flex-col overflow-hidden group">
+              <Card className="h-full flex flex-col overflow-hidden group cursor-pointer">
                 <div className="relative h-48 overflow-hidden">
                   <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -3,13 +3,14 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock } from "lucide-react";
+import HoverCard from "@/components/animations/hover-card";
 
 // Sample blog data - in a real app, this would come from a database
 const blogData = [{
   id: "1",
   title: "Building Performant React Applications",
   excerpt: "Learn how to optimize your React applications for better performance and user experience.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/React.jpg",
   date: "Mar 15, 2023",
   readTime: "8 min read",
   tags: ["React", "Performance", "Web Development"],
@@ -18,7 +19,7 @@ const blogData = [{
   id: "2",
   title: "Getting Started with Next.js and TypeScript",
   excerpt: "A comprehensive guide to setting up a new project with Next.js and TypeScript.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/TypeScript.jpg",
   date: "Feb 22, 2023",
   readTime: "10 min read",
   tags: ["Next.js", "TypeScript", "Tutorial"],
@@ -27,7 +28,7 @@ const blogData = [{
   id: "3",
   title: "MongoDB Best Practices for Node.js Developers",
   excerpt: "Learn how to effectively use MongoDB in your Node.js applications with these best practices.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/MongoDb.jpg",
   date: "Jan 10, 2023",
   readTime: "12 min read",
   tags: ["MongoDB", "Node.js", "Database"],
@@ -36,7 +37,7 @@ const blogData = [{
   id: "4",
   title: "Mastering CSS Grid Layout",
   excerpt: "A deep dive into CSS Grid Layout and how to use it to create complex layouts with ease.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/css.jpg",
   date: "Dec 5, 2022",
   readTime: "15 min read",
   tags: ["CSS", "Web Design", "Frontend"],
@@ -45,7 +46,7 @@ const blogData = [{
   id: "5",
   title: "Introduction to Server-Side Rendering with Next.js",
   excerpt: "Learn how Server-Side Rendering works in Next.js and when to use it in your applications.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/nextjs_hero.jpg",
   date: "Nov 18, 2022",
   readTime: "10 min read",
   tags: ["Next.js", "SSR", "React"],
@@ -54,7 +55,7 @@ const blogData = [{
   id: "6",
   title: "Building RESTful APIs with Node.js and Express",
   excerpt: "A comprehensive guide to building RESTful APIs using Node.js and Express.",
-  image: "/placeholder.svg?height=400&width=600",
+  image: "/projects/nodejs.webp",
   date: "Oct 22, 2022",
   readTime: "14 min read",
   tags: ["Node.js", "Express", "API", "Backend"],
@@ -75,7 +76,8 @@ export default function BlogPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogData.map(post => <Card key={post.id} className="h-full flex flex-col overflow-hidden group">
+          {blogData.map(post => <HoverCard key={post.id} scale={1.03} shadow className="h-full">
+            <Card className="h-full flex flex-col overflow-hidden group cursor-pointer">
               <div className="relative h-48 overflow-hidden">
                 <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover transition-transform duration-300 group-hover:scale-105" />
               </div>
@@ -108,7 +110,8 @@ export default function BlogPage() {
                   Read More
                 </Link>
               </CardFooter>
-            </Card>)}
+            </Card>
+            </HoverCard>)}
         </div>
       </div>
     </main>;
